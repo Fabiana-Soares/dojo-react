@@ -3,10 +3,30 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
+import {ThemeProvider} from "@material-ui/core/styles";
+import CssBaseLine from "@material-ui/core/CssBaseline";
+import { createMuiTheme } from "@material-ui/core/styles";
+
+const theme = createMuiTheme({
+  pallete:{
+    primary: {
+      main: "#FF0000"
+    }
+  },
+  typography: {
+    body2: {
+      fontSize: 20
+    }
+  }
+});
+
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <ThemeProvider theme={theme}>
+      <CssBaseLine />
+      <App />
+    </ThemeProvider>
   </React.StrictMode>,
   document.getElementById('root')
 );
