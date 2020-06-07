@@ -10,7 +10,7 @@ import { createMuiTheme } from "@material-ui/core/styles";
 const theme = createMuiTheme({
   pallete:{
     primary: {
-      main: "#FF2000"
+      main: "#FF0000"
     }
   },
   typography: {
